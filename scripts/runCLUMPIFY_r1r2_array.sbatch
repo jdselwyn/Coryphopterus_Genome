@@ -2,8 +2,8 @@
 
 #SBATCH --job-name=clmp_r12
 #SBATCH -o SLURM_out/clmp_r1r2-%A_%a.out
-#SBATCH -p normal,gpu,cbirdq
-#SBATCH --time=24:00:00
+#SBATCH -p normal,cbirdq
+#SBATCH --time=4-00:00:00
 
 module load bbmap/38.90
 module load parallel
