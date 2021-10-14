@@ -1,0 +1,44 @@
+Read1 before filtering:
+total reads: 375738804
+total bases: 55986044318
+Q20 bases: 54642357726(97.6%)
+Q30 bases: 52160456474(93.1669%)
+
+Read2 before filtering:
+total reads: 375738804
+total bases: 55916990216
+Q20 bases: 54114270144(96.7761%)
+Q30 bases: 50972909159(91.1582%)
+
+Read1 after filtering:
+total reads: 362450534
+total bases: 54157255403
+Q20 bases: 52988390771(97.8417%)
+Q30 bases: 50660480097(93.5433%)
+
+Read2 aftering filtering:
+total reads: 362450534
+total bases: 54148096525
+Q20 bases: 52572051082(97.0894%)
+Q30 bases: 49607006384(91.6136%)
+
+Filtering result:
+reads passed filter: 724901068
+reads failed due to low quality: 1008212
+reads failed due to too many N: 35026
+reads failed due to too short: 25413316
+reads failed due to low complexity: 119986
+reads with adapter trimmed: 6317550
+bases trimmed due to adapters: 291454088
+reads with polyX in 3' end: 6827164
+bases trimmed in polyX tail: 88453598
+
+Duplication rate: 11.8144%
+
+Insert size peak (evaluated by paired-end reads): 0
+
+JSON report: fq_fp1/COPE-0922.fastp.json
+HTML report: fq_fp1/COPE-0922.fastp.html
+
+fastp --in1 reads/COPE-0922.F.fq.gz --in2 reads/COPE-0922.R.fq.gz --out1 fq_fp1/COPE-0922.r1.fq.gz --out2 fq_fp1/COPE-0922.r2.fq.gz --unpaired1 fq_fp1/COPE-0922.unprd.fq.gz --unpaired2 fq_fp1/COPE-0922.unprd.fq.gz --failed_out fq_fp1/failed/COPE-0922.fail.fq.gz -h fq_fp1/COPE-0922.fastp.html -j fq_fp1/COPE-0922.fastp.json --qualified_quality_phred 20 --unqualified_percent_limit 40 --length_required 140 --low_complexity_filter --complexity_threshold 30 --detect_adapter_for_pe --adapter_sequence=AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter_sequence_r2=AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --cut_tail --cut_tail_window_size 1 --cut_tail_mean_quality 20 --trim_poly_g --poly_g_min_len 10 --trim_poly_x --report_title fastp_1 
+fastp v0.20.1, time used: 5124 seconds
