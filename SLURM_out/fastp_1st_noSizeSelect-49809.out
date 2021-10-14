@@ -42,3 +42,55 @@ HTML report: fq_fp1/COPE-0922.fastp.html
 
 fastp --in1 reads/COPE-0922.F.fq.gz --in2 reads/COPE-0922.R.fq.gz --out1 fq_fp1/COPE-0922.r1.fq.gz --out2 fq_fp1/COPE-0922.r2.fq.gz --unpaired1 fq_fp1/COPE-0922.unprd.fq.gz --unpaired2 fq_fp1/COPE-0922.unprd.fq.gz --failed_out fq_fp1/failed/COPE-0922.fail.fq.gz -h fq_fp1/COPE-0922.fastp.html -j fq_fp1/COPE-0922.fastp.json --qualified_quality_phred 20 --unqualified_percent_limit 40 --length_required 140 --low_complexity_filter --complexity_threshold 30 --detect_adapter_for_pe --adapter_sequence=AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter_sequence_r2=AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --cut_tail --cut_tail_window_size 1 --cut_tail_mean_quality 20 --trim_poly_g --poly_g_min_len 10 --trim_poly_x --report_title fastp_1 
 fastp v0.20.1, time used: 5124 seconds
+Read1 before filtering:
+total reads: 1527091084
+total bases: 226808751875
+Q20 bases: 220983889712(97.4318%)
+Q30 bases: 210964128520(93.0141%)
+
+Read2 before filtering:
+total reads: 1527091084
+total bases: 223278855153
+Q20 bases: 213077055247(95.4309%)
+Q30 bases: 197959125988(88.66%)
+
+Read1 after filtering:
+total reads: 1338761453
+total bases: 200656481571
+Q20 bases: 197057591597(98.2064%)
+Q30 bases: 189525548471(94.4527%)
+
+Read2 aftering filtering:
+total reads: 1338761453
+total bases: 200509272542
+Q20 bases: 193743334238(96.6256%)
+Q30 bases: 181803036780(90.6706%)
+
+Filtering result:
+reads passed filter: 2677522906
+reads failed due to low quality: 4005326
+reads failed due to too many N: 204576
+reads failed due to too short: 371524744
+reads failed due to low complexity: 924616
+reads with adapter trimmed: 72760657
+bases trimmed due to adapters: 3383387395
+reads with polyX in 3' end: 44226486
+bases trimmed in polyX tail: 710176727
+
+Duplication rate: 22.8301%
+
+Insert size peak (evaluated by paired-end reads): 150
+
+JSON report: fq_fp1/COPE-0773.fastp.json
+HTML report: fq_fp1/COPE-0773.fastp.html
+
+fastp --in1 reads/COPE-0773.F.fq.gz --in2 reads/COPE-0773.R.fq.gz --out1 fq_fp1/COPE-0773.r1.fq.gz --out2 fq_fp1/COPE-0773.r2.fq.gz --unpaired1 fq_fp1/COPE-0773.unprd.fq.gz --unpaired2 fq_fp1/COPE-0773.unprd.fq.gz --failed_out fq_fp1/failed/COPE-0773.fail.fq.gz -h fq_fp1/COPE-0773.fastp.html -j fq_fp1/COPE-0773.fastp.json --qualified_quality_phred 20 --unqualified_percent_limit 40 --length_required 140 --low_complexity_filter --complexity_threshold 30 --detect_adapter_for_pe --adapter_sequence=AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter_sequence_r2=AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --cut_tail --cut_tail_window_size 1 --cut_tail_mean_quality 20 --trim_poly_g --poly_g_min_len 10 --trim_poly_x --report_title fastp_1 
+fastp v0.20.1, time used: 20824 seconds
+[INFO   ]         multiqc : This is MultiQC v1.9
+[INFO   ]         multiqc : Template    : default
+[INFO   ]         multiqc : Searching   : /work/hobi/jselwyn/Coryphopterus_Genome/fq_fp1
+[INFO   ]           fastp : Found 2 reports
+[INFO   ]         multiqc : Compressing plot data
+[INFO   ]         multiqc : Report      : fq_fp1/1st_fastp_report.html
+[INFO   ]         multiqc : Data        : fq_fp1/1st_fastp_report_data
+[INFO   ]         multiqc : MultiQC complete

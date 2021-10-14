@@ -1,0 +1,3 @@
+Sample	fastp_mqc-generalstats-fastp-pct_duplication	fastp_mqc-generalstats-fastp-after_filtering_q30_rate	fastp_mqc-generalstats-fastp-after_filtering_q30_bases	fastp_mqc-generalstats-fastp-after_filtering_gc_content	fastp_mqc-generalstats-fastp-pct_surviving	fastp_mqc-generalstats-fastp-pct_adapter
+COPE-0773	22.8301	0.925624	371328585251.0	0.395301	87.66742645718963	2.382328656173334
+COPE-0922	11.8144	0.925785	100267486481.0	0.395044	96.46342888769082	0.8406837319895232
