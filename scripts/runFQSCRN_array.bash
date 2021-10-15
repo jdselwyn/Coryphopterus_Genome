@@ -14,8 +14,8 @@ all_samples=( $(ls $INDIR/$FQPATTERN) )
 
 JOBID=$(sbatch --array=0-$((${#all_samples[@]}-1))%${NUMNODES} \
        --output=SLURM_out/slurm-fqscrn.%A.%a.out \
-       --partition normal,cbirdq,gpu \
-       -t 24:00:00 \
+       --partition normal,cbirdq \
+       -t 4-00:00:00 \
        scripts/runFQSCRN_array.sbatch "${FQPATTERN}" ${INDIR} ${OUTDIR})
 NUMBER1=$(echo ${JOBID} | sed 's/[^0-9]*//g')
 
