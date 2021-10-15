@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+fastp	all_sections	COPE-0922.clmp.r1r2_fastp	/work/hobi/jselwyn/Coryphopterus_Genome/fq_fp1_clmp_fp2/COPE-0922.clmp.r1r2_fastp.json
+fastp	all_sections	COPE-0773.clmp.r1r2_fastp	/work/hobi/jselwyn/Coryphopterus_Genome/fq_fp1_clmp_fp2/COPE-0773.clmp.r1r2_fastp.json

@@ -1,0 +1,106 @@
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 324930482
+total bases: 48550828200
+Q20 bases: 47465598784(97.7648%)
+Q30 bases: 45372274468(93.4531%)
+
+Read2 before filtering:
+total reads: 324930482
+total bases: 48542904904
+Q20 bases: 47070823388(96.9675%)
+Q30 bases: 44383780621(91.4321%)
+
+Read1 after filtering:
+total reads: 314565882
+total bases: 47002485327
+Q20 bases: 46164661871(98.2175%)
+Q30 bases: 44266506692(94.1791%)
+
+Read2 aftering filtering:
+total reads: 314565882
+total bases: 46991719673
+Q20 bases: 45826314995(97.52%)
+Q30 bases: 43348741278(92.2476%)
+
+Filtering result:
+reads passed filter: 629131764
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 20729200
+reads with adapter trimmed: 165356
+bases trimmed due to adapters: 8257389
+reads corrected by overlap analysis: 7429858
+bases corrected by overlap analysis: 18409002
+
+Duplication rate: 2.20024%
+
+Insert size peak (evaluated by paired-end reads): 150
+
+JSON report: fq_fp1_clmp_fp2/COPE-0922.clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmp_fp2/COPE-0922.clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmp/COPE-0922.clmp.r1.fq.gz --in2 fq_fp1_clmp/COPE-0922.clmp.r2.fq.gz --out1 fq_fp1_clmp_fp2/COPE-0922.clmp.fp2_r1.fq.gz --out2 fq_fp1_clmp_fp2/COPE-0922.clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmp_fp2/COPE-0922.clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmp_fp2/COPE-0922.clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmp_fp2/failed/COPE-0922.clmp.fp2_fail.fq.gz -h fq_fp1_clmp_fp2/COPE-0922.clmp.r1r2_fastp.html -j fq_fp1_clmp_fp2/COPE-0922.clmp.r1r2_fastp.json --detect_adapter_for_pe --length_required 140 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim 4 De Novo R1R2 
+fastp v0.20.1, time used: 3848 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 1093331637
+total bases: 163863988993
+Q20 bases: 160734400050(98.0901%)
+Q30 bases: 154546230103(94.3137%)
+
+Read2 before filtering:
+total reads: 1093331637
+total bases: 163744398568
+Q20 bases: 157763420168(96.3474%)
+Q30 bases: 147747812110(90.2308%)
+
+Read1 after filtering:
+total reads: 1012694454
+total bases: 151784892757
+Q20 bases: 149683813802(98.6158%)
+Q30 bases: 144606599600(95.2707%)
+
+Read2 aftering filtering:
+total reads: 1012694454
+total bases: 151704429755
+Q20 bases: 147601681242(97.2956%)
+Q30 bases: 139370866435(91.87%)
+
+Filtering result:
+reads passed filter: 2025388908
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 161274366
+reads with adapter trimmed: 1525282
+bases trimmed due to adapters: 78131162
+reads corrected by overlap analysis: 74531226
+bases corrected by overlap analysis: 192660896
+
+Duplication rate: 5.78833%
+
+Insert size peak (evaluated by paired-end reads): 150
+
+JSON report: fq_fp1_clmp_fp2/COPE-0773.clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmp_fp2/COPE-0773.clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmp/COPE-0773.clmp.r1.fq.gz --in2 fq_fp1_clmp/COPE-0773.clmp.r2.fq.gz --out1 fq_fp1_clmp_fp2/COPE-0773.clmp.fp2_r1.fq.gz --out2 fq_fp1_clmp_fp2/COPE-0773.clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmp_fp2/COPE-0773.clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmp_fp2/COPE-0773.clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmp_fp2/failed/COPE-0773.clmp.fp2_fail.fq.gz -h fq_fp1_clmp_fp2/COPE-0773.clmp.r1r2_fastp.html -j fq_fp1_clmp_fp2/COPE-0773.clmp.r1r2_fastp.json --detect_adapter_for_pe --length_required 140 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim 4 De Novo R1R2 
+fastp v0.20.1, time used: 12623 seconds
+[INFO   ]         multiqc : This is MultiQC v1.9
+[INFO   ]         multiqc : Template    : default
+[INFO   ]         multiqc : Searching   : /work/hobi/jselwyn/Coryphopterus_Genome/fq_fp1_clmp_fp2
+[INFO   ]           fastp : Found 2 reports
+[INFO   ]         multiqc : Compressing plot data
+[INFO   ]         multiqc : Report      : fq_fp1_clmp_fp2/2nd_fastp_report.html
+[INFO   ]         multiqc : Data        : fq_fp1_clmp_fp2/2nd_fastp_report_data
+[INFO   ]         multiqc : MultiQC complete
