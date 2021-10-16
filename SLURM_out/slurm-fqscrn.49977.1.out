@@ -1,0 +1,43 @@
+INDIR=fq_fp1_clmp_fp2
+TMPDIR=/tmp/fastqscrn_jselwyn_49980_1
+OUTDIR=fq_fp1_clmp_fp2_fqscrn
+CONFFILE=/work/hobi/egarcia111/reference_databases/fastq_screen_nofish_20210424.conf
+PATTERN=*.fq.gz
+PARALLELISM=
+THREADS=20
+SUBSET=0
+FILTER=000000000000
+INFILES:
+fq_fp1_clmp_fp2/COPE-0773.clmp.fp2_r2.fq.gz
+
+Fri Oct 15 10:35:17 CDT 2021 RUNNING FASTQ_SCREEN TO FILTER FQ FILES AND GENERATE REPORTS, NO SUBSETTING
+Using fastq_screen v0.14.1
+Reading configuration from '/work/hobi/egarcia111/reference_databases/fastq_screen_nofish_20210424.conf'
+Adding database Human
+Adding database Ecoli
+Adding database PhiX
+Adding database Contamnts_Adaptrs
+Adding database Vectors
+Adding database Bacteria_24k
+Adding database Protists_1k
+Adding database Viruses
+Adding database Fungi_RefSeq_release
+Adding database Coral
+Adding database Bird
+Adding database Plant
+Using 20 threads for searches
+Option --subset set to 0: processing all reads in FASTQ files
+Processing COPE-0773.clmp.fp2_r2.fq.gz
+Not making data subset
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Human
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Ecoli
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against PhiX
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Contamnts_Adaptrs
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Vectors
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Bacteria_24k
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Protists_1k
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Viruses
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Fungi_RefSeq_release
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Coral
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Bird
+Searching COPE-0773.clmp.fp2_r2.fq.gz_temp_subset.fastq against Plant
