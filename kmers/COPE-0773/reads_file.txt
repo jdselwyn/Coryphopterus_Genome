@@ -1,0 +1,2 @@
+fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0773.clmp.fp2_repr.r1.fq.gz
+fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0773.clmp.fp2_repr.r2.fq.gz
