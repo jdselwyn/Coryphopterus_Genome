@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+FastQ Screen	all_sections	COPE-0922.clmp.fp2_r1_screen	/work/hobi/jselwyn/Coryphopterus_Genome/fq_fp1_clmp_fp2_fqscrn/COPE-0922.clmp.fp2_r1_screen.txt
+FastQ Screen	all_sections	COPE-0773.clmp.fp2_r2_screen	/work/hobi/jselwyn/Coryphopterus_Genome/fq_fp1_clmp_fp2_fqscrn/COPE-0773.clmp.fp2_r2_screen.txt
+FastQ Screen	all_sections	COPE-0922.clmp.fp2_r2_screen	/work/hobi/jselwyn/Coryphopterus_Genome/fq_fp1_clmp_fp2_fqscrn/COPE-0922.clmp.fp2_r2_screen.txt
+FastQ Screen	all_sections	COPE-0773.clmp.fp2_r1_screen	/work/hobi/jselwyn/Coryphopterus_Genome/fq_fp1_clmp_fp2_fqscrn/COPE-0773.clmp.fp2_r1_screen.txt

@@ -1,0 +1,29 @@
+ERROR: Unable to locate a modulefile for 'java/1.8'
+java -ea -Xmx213459m -cp /home/apps/bbmap/38.90/bin/current/ jgi.SplitPairsAndSingles rp in1=fq_fp1_clmp_fp2_fqscrn/COPE-0922.clmp.fp2_r1.tagged_filter.fastq.gz in2=fq_fp1_clmp_fp2_fqscrn/COPE-0922.clmp.fp2_r2.tagged_filter.fastq.gz out1=fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0922.clmp.fp2_repr.r1.TMP.fq.gz out2=fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0922.clmp.fp2_repr.r2.TMP.fq.gz outs=fq_fp1_clmp_fp2_fqscrn_repaired/orphans/COPE-0922.clmp.fp2_repr.orph.fq.gz repair
+Executing jgi.SplitPairsAndSingles [rp, in1=fq_fp1_clmp_fp2_fqscrn/COPE-0922.clmp.fp2_r1.tagged_filter.fastq.gz, in2=fq_fp1_clmp_fp2_fqscrn/COPE-0922.clmp.fp2_r2.tagged_filter.fastq.gz, out1=fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0922.clmp.fp2_repr.r1.TMP.fq.gz, out2=fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0922.clmp.fp2_repr.r2.TMP.fq.gz, outs=fq_fp1_clmp_fp2_fqscrn_repaired/orphans/COPE-0922.clmp.fp2_repr.orph.fq.gz, repair]
+
+Set INTERLEAVED to false
+Started output stream.
+
+Input:                  	621616814 reads 		92872800918 bases.
+Result:                 	621616814 reads (100.00%) 	92872800918 bases (100.00%)
+Pairs:                  	615138632 reads (98.96%) 	91905163715 bases (98.96%)
+Singletons:             	6478182 reads (1.04%) 	967637203 bases (1.04%)
+
+Time:                         	1912.216 seconds.
+Reads Processed:        621m 	325.08k reads/sec
+Bases Processed:      92872m 	48.57m bases/sec
+java -ea -Xmx213459m -cp /home/apps/bbmap/38.90/bin/current/ jgi.SplitPairsAndSingles rp in1=fq_fp1_clmp_fp2_fqscrn/COPE-0773.clmp.fp2_r1.tagged_filter.fastq.gz in2=fq_fp1_clmp_fp2_fqscrn/COPE-0773.clmp.fp2_r2.tagged_filter.fastq.gz out1=fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0773.clmp.fp2_repr.r1.TMP.fq.gz out2=fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0773.clmp.fp2_repr.r2.TMP.fq.gz outs=fq_fp1_clmp_fp2_fqscrn_repaired/orphans/COPE-0773.clmp.fp2_repr.orph.fq.gz repair
+Executing jgi.SplitPairsAndSingles [rp, in1=fq_fp1_clmp_fp2_fqscrn/COPE-0773.clmp.fp2_r1.tagged_filter.fastq.gz, in2=fq_fp1_clmp_fp2_fqscrn/COPE-0773.clmp.fp2_r2.tagged_filter.fastq.gz, out1=fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0773.clmp.fp2_repr.r1.TMP.fq.gz, out2=fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0773.clmp.fp2_repr.r2.TMP.fq.gz, outs=fq_fp1_clmp_fp2_fqscrn_repaired/orphans/COPE-0773.clmp.fp2_repr.orph.fq.gz, repair]
+
+Set INTERLEAVED to false
+Started output stream.
+
+Input:                  	1977222103 reads 		296283694387 bases.
+Result:                 	1977222103 reads (100.00%) 	296283694387 bases (100.00%)
+Pairs:                  	1943741400 reads (98.31%) 	291269266434 bases (98.31%)
+Singletons:             	33480703 reads (1.69%) 	5014427953 bases (1.69%)
+
+Time:                         	6119.028 seconds.
+Reads Processed:       1977m 	323.13k reads/sec
+Bases Processed:     296283m 	48.42m bases/sec

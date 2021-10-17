@@ -41,3 +41,7 @@ Searching COPE-0773.clmp.fp2_r1.fq.gz_temp_subset.fastq against Fungi_RefSeq_rel
 Searching COPE-0773.clmp.fp2_r1.fq.gz_temp_subset.fastq against Coral
 Searching COPE-0773.clmp.fp2_r1.fq.gz_temp_subset.fastq against Bird
 Searching COPE-0773.clmp.fp2_r1.fq.gz_temp_subset.fastq against Plant
+Filtering COPE-0773.clmp.fp2_r1.tagged.fastq.gz
+Filtering files with filter '000000000000'
+Filtering COPE-0773.clmp.fp2_r1.tagged.fastq.gz
+Processing complete
