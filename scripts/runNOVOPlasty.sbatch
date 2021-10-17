@@ -21,6 +21,8 @@ mkdir -p ${outDir}/${inBase}_${bestK}
 
 inDir=$(pwd)/${inDir}
 outDir=$(pwd)/${outDir}
+seed_seq=$(pwd)/${seed_seq}
+ref_seq=$(pwd)/${ref_seq}
 
 in1=$(ls ${inDir}/${inBase}*gz | grep r1)
 in2=$(ls ${inDir}/${inBase}*gz | grep r2)

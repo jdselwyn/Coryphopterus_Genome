@@ -62,5 +62,5 @@ sbatch --array=0-1 \
   115 \
   reference/rgoby_co1.fasta \
   reference/rgoby_mtdna.fasta
-50112 - using 115 kmer size
+50114 - using 115 kmer size
 ```
