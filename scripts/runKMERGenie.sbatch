@@ -2,6 +2,7 @@
 
 #SBATCH --job-name=kmergenie
 #SBATCH -p normal,cbirdq
+#SBATCH -t 4-00:00:00
 
 module load kmergenie
 
