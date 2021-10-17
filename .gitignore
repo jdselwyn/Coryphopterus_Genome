@@ -1,2 +1,3 @@
 *.fq.gz
 *fastq.gz
+Reference_Sequence/*
