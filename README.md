@@ -50,7 +50,7 @@ sbatch --array=0-1 \
   --output=SLURM_out/kmergenie_%A_%a.out \
   scripts/runKMERGenie.sbatch \
   fq_fp1_clmp_fp2_fqscrn_repaired
-50107
+50109
 ```
 
 ## Step 7. MitoGenome
@@ -59,8 +59,8 @@ sbatch --array=0-1 \
   --output=SLURM_out/mtGenome_%A_%a.out \
   scripts/runNOVOPlasty.sbatch \
   fq_fp1_clmp_fp2_fqscrn_repaired \
-  33 \
+  115 \
   reference/rgoby_co1.fasta \
   reference/rgoby_mtdna.fasta
-
+50112 - using 115 kmer size
 ```
