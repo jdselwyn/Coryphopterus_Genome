@@ -1,0 +1,53 @@
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.2
+Author: Nicolas Dierckxsens, (c) 2015-2020
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify if everything is correct ***
+
+Project:
+-----------------------
+Project name          = COPE-0922
+Type                  = mito
+Genome range          = 12000-22000
+K-mer                 = 115
+Max memory            = 
+Extended log          = 1
+Save assembled reads  = 2
+Seed Input            = /work/hobi/jselwyn/Coryphopterus_Genome/reference/rgoby_co1.fasta
+Extend seed directly  = 
+Reference sequence    = /work/hobi/jselwyn/Coryphopterus_Genome/reference/rgoby_mtdna.fasta
+Variance detection    = 
+Chloroplast sequence  = 
+
+Dataset 1:
+-----------------------
+Read Length           = 150
+Insert size           = 300
+Platform              = illumina
+Single/Paired         = PE
+Combined reads        = 
+Forward reads         = /work/hobi/jselwyn/Coryphopterus_Genome/fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0922.clmp.fp2_repr.r1.fq.gz
+Reverse reads         = /work/hobi/jselwyn/Coryphopterus_Genome/fq_fp1_clmp_fp2_fqscrn_repaired/COPE-0922.clmp.fp2_repr.r2.fq.gz
+
+Heteroplasmy:
+-----------------------
+Heteroplasmy          = 
+HP exclude list       = 
+PCR-free              = 
+
+Optional:
+-----------------------
+Insert size auto      = yes
+Use Quality Scores    = 
+
+
+Reading Input......OK
+
+Scan reference sequence......OK
+
+Building Hash Table...slurmstepd: error: *** JOB 50116 ON hpcc17 CANCELLED AT 2021-10-17T14:50:29 ***
