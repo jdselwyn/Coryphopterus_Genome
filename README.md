@@ -2,10 +2,8 @@
 Coryphopterus hyalinus short-read Genome Assembly
 
 ## To Do
-- MitoGenome
+- MitoGenome - change seed to CHYA COI
 - Decide settings for SPAdes
-- Kmer Genie
--
 
 ## Step 1. 1st fastp
 ```
@@ -54,6 +52,9 @@ sbatch --array=0-1 \
 ```
 
 ## Step 7. MitoGenome
+https://twitter.com/RD_Denton/status/1376576594307866624
+https://github.com/ndierckx/NOVOPlasty
+https://github.com/linzhi2013/MitoZ
 ```
 sbatch --array=0-1 \
   --output=SLURM_out/mtGenome_%A_%a.out \
@@ -62,5 +63,7 @@ sbatch --array=0-1 \
   115 \
   reference/rgoby_co1.fasta \
   reference/rgoby_mtdna.fasta
-50114 - using 115 kmer size
+50116 - using 115 kmer size
 ```
+## Step 8. SPAdes Assembly
+Must be run on ODU HPC - requires too much memory

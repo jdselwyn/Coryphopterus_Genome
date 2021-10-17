@@ -9,7 +9,7 @@ module load novoplasty
 inDir=$1
 bestK=$2
 seed_seq=$3
-ref_seq=$4
+#ref_seq=$4
 read_length=150
 insert_size=300
 
@@ -22,7 +22,8 @@ mkdir -p ${outDir}/${inBase}_${bestK}
 inDir=$(pwd)/${inDir}
 outDir=$(pwd)/${outDir}
 seed_seq=$(pwd)/${seed_seq}
-ref_seq=$(pwd)/${ref_seq}
+#ref_seq=$(pwd)/${ref_seq}
+ref_seq=''
 
 in1=$(ls ${inDir}/${inBase}*gz | grep r1)
 in2=$(ls ${inDir}/${inBase}*gz | grep r2)
