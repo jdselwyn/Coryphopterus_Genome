@@ -17,7 +17,7 @@ readarray -t INDIVIDUALS < <(cut -d, -f2 base_names) #Read in that individual in
 inBase=${INDIVIDUALS[${SLURM_ARRAY_TASK_ID}]}
 
 outDir=mtGenome
-mkdir -p ${outDir}/${inBase}
+mkdir -p ${outDir}/${inBase}_${bestK}
 
 inDir=$(pwd)/${inDir}
 outDir=$(pwd)/${outDir}
@@ -25,7 +25,7 @@ outDir=$(pwd)/${outDir}
 in1=$(ls ${inDir}/${inBase}*gz | grep r1)
 in2=$(ls ${inDir}/${inBase}*gz | grep r2)
 
-cd ${outDir}/${inBase}
+cd ${outDir}/${inBase}_${bestK}
 
 printf 'Project: \n' > mito.config
 printf '1\b----------------------- \n' >> mito.config
@@ -61,6 +61,6 @@ printf 'Optional:\n' >> mito.config
 printf '1\b----------------------- \n' >> mito.config
 printf 'Insert size auto      = yes\n' >> mito.config
 printf 'Use Quality Scores    = no\n' >> mito.config
-printf 'Output path           = %s\n' ${outDir}/${inBase}_mtgenome.fasta >> mito.config
+printf 'Output path           = %s\n' ${inBase}_mtgenome.fasta >> mito.config
 
 novoplasty.pl -c mito.config
