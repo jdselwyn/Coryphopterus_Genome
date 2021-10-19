@@ -55,15 +55,18 @@ sbatch --array=0-1 \
 https://twitter.com/RD_Denton/status/1376576594307866624
 https://github.com/ndierckx/NOVOPlasty
 https://github.com/linzhi2013/MitoZ
+https://www.nature.com/articles/s41598-018-36132-6
 ```
 sbatch --array=0-1 \
   --output=SLURM_out/mtGenome_%A_%a.out \
   scripts/runNOVOPlasty.sbatch \
   fq_fp1_clmp_fp2_fqscrn_repaired \
-  115 \
-  reference/rgoby_co1.fasta \
-  reference/rgoby_mtdna.fasta
-50116 - using 115 kmer size
+  33 \
+  Reference_Sequence/chya_co1.fasta
+
+50118 - using 115 kmer size
+50120 - using 33 kmer size
+
 ```
 ## Step 8. SPAdes Assembly
 Must be run on ODU HPC - requires too much memory
