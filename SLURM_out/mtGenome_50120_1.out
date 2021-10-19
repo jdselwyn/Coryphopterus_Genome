@@ -48,4 +48,4 @@ Use Quality Scores    =
 
 Reading Input......OK
 
-Building Hash Table...
+Building Hash Table...slurmstepd: error: *** JOB 50120 ON hpcc03 CANCELLED AT 2021-10-19T15:49:58 ***
