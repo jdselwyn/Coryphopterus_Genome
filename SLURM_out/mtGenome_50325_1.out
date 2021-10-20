@@ -1,0 +1,59 @@
+[2021-10-20][13:25:57][rasusa][[37mINFO[0m] Target number of bases to subsample to is: 30000000000
+[2021-10-20][13:25:57][rasusa][[37mINFO[0m] Gathering read lengths...
+[2021-10-20][13:35:51][rasusa][[37mINFO[0m] 307569316 reads detected in the first input
+[2021-10-20][13:36:19][rasusa][[37mINFO[0m] Keeping 100386557 reads from each input
+[2021-10-20][14:23:04][rasusa][[37mINFO[0m] Gathering read lengths for second input file...
+[2021-10-20][14:34:11][rasusa][[37mINFO[0m] Both input files have the same number of reads (307569316) 👍
+[2021-10-20][15:30:48][rasusa][[37mINFO[0m] Actual coverage of kept reads is 30.00x
+[2021-10-20][15:30:48][rasusa][[37mINFO[0m] Done 🎉
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.2
+Author: Nicolas Dierckxsens, (c) 2015-2020
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify if everything is correct ***
+
+Project:
+-----------------------
+Project name          = COPE-0922
+Type                  = mito
+Genome range          = 18000-22000
+K-mer                 = 75
+Max memory            = 
+Extended log          = 1
+Save assembled reads  = 2
+Seed Input            = /work/hobi/jselwyn/Coryphopterus_Genome/Reference_Sequence/chya_co1.fasta
+Extend seed directly  = 
+Reference sequence    = 
+Variance detection    = 
+Chloroplast sequence  = 
+
+Dataset 1:
+-----------------------
+Read Length           = 150
+Insert size           = 300
+Platform              = illumina
+Single/Paired         = PE
+Combined reads        = 
+Forward reads         = COPE-0922.sub.r1.fq.gz
+Reverse reads         = COPE-0922.sub.r2.fq.gz
+
+Heteroplasmy:
+-----------------------
+Heteroplasmy          = 
+HP exclude list       = 
+PCR-free              = 
+
+Optional:
+-----------------------
+Insert size auto      = yes
+Use Quality Scores    = 
+
+
+Reading Input......OK
+
+Building Hash Table...
