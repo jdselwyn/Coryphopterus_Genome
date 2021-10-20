@@ -66,7 +66,7 @@ sbatch --array=0-1 \
   Reference_Sequence/chya_co1.fasta
 
 ```
-Annotate both assembled circular mtGenomes with: http://mitofish.aori.u-tokyo.ac.jp/annotation/input.html. Seems like there is an issue with the 33 kmer assemblies since the d-loop is split into 4 chunks. Initially made genome likely too large ~22k when most of the fish on mitofish are ~16k. 
+Annotate both assembled circular mtGenomes with: http://mitofish.aori.u-tokyo.ac.jp/annotation/input.html. Seems like there is an issue with the 33 kmer assemblies since the d-loop is split into 4 chunks. Initially made genome likely too large ~22k when most of the fish on mitofish are ~16k. Increasing the kmer length to 75 seems to have made it circularize into a more realistic looking genome. However there are two contigs which I'm not sure yet what to do with. It says to "Check manually if the two contigs overlap to merge them together!"
 
 Make a Tree with all the full mitochondrial sequences found on mitofish website. See if it passes the "smell test"
 ```

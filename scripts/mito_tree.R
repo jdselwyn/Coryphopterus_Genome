@@ -33,30 +33,43 @@ fish_mtdna %>%
             max_length = max(length))
 
 #### Align Sequences ####
-aligned <- fish_mtdna %>%
-  dplyr::slice(c(1, sample(nrow(.), 5))) %>%
-  distinct %$%
-  set_names(sequence, species) %>%
-  DNAStringSet() %>%
-  msa(type = 'DNA', verbose = TRUE, order = 'input')  
 
-aligned_save <- aligned
 
-alignment2Fasta <- function(alignment, filename) {
-  sink(filename)
+if(Sys.info()['sysname'] != 'Windows'){
+  aligned <- fish_mtdna %>%
+    distinct %$%
+    set_names(sequence, species) %>%
+    DNAStringSet() %>%
+    msa(type = 'DNA', verbose = TRUE, order = 'input')  
   
-  n <- length(rownames(alignment))
-  for(i in seq(1, n)) {
-    cat(paste0('>', rownames(alignment)[i]))
-    cat('\n')
-    the.sequence <- toString(unmasked(alignment)[[i]])
-    cat(the.sequence)
-    cat('\n')  
+  aligned_save <- aligned
+  
+  alignment2Fasta <- function(alignment, filename) {
+    sink(filename)
+    
+    n <- length(rownames(alignment))
+    for(i in seq(1, n)) {
+      cat(paste0('>', rownames(alignment)[i]))
+      cat('\n')
+      the.sequence <- toString(unmasked(alignment)[[i]])
+      cat(the.sequence)
+      cat('\n')  
+    }
+    
+    sink(NULL)
   }
   
-  sink(NULL)
+  alignment2Fasta(aligned_save, './mtGenome/aligned_fish_mtDNA.fa')
+} else {
+  aligned <- fish_mtdna %>%
+    dplyr::slice(c(1, sample(nrow(.), 5))) %>%
+    distinct %$%
+    set_names(sequence, species) %>%
+    DNAStringSet() %>%
+    msa(type = 'DNA', verbose = TRUE, order = 'input')  
+  
+  aligned_save <- aligned
 }
-alignment2Fasta(aligned_save, './mtGenome/aligned_fish_mtDNA.fa')
 
 aligned <- aligned_save %>% 
   msaConvert(type = 'phangorn::phyDat') %>%
@@ -76,14 +89,15 @@ dna_dist <- dist.ml(aligned, model="JC69")
 fish_nj <- nj(dna_dist)
 plot(fish_nj)
 
-
 #ML tree
 fish_ml <- pml(fish_nj, aligned, k = 4) %>%
   optim.pml(., model = "GTR", optGamma = TRUE, optInv = TRUE, optNni = TRUE,
             optBf = TRUE, optQ = TRUE, optEdge = TRUE,
             rearrangement = "stochastic")
 
-fish_bs <- bootstrap.pml(fish_ml, bs = 10000, 
+fish_bs <- bootstrap.pml(fish_ml, 
+                         bs = if_else(Sys.info()['sysname'] != 'Windows',
+                                      10000, 100), 
                          optGamma = TRUE, optInv = TRUE, optNni = TRUE,
                          optBf = TRUE, optQ = TRUE, optEdge = TRUE,
                          multicore = Sys.info()['sysname'] != 'Windows', 
