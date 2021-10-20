@@ -1,0 +1,4 @@
+[2021-10-20][16:46:42][rasusa][[37mINFO[0m] Target number of bases to subsample to is: 30000000000
+[2021-10-20][16:46:42][rasusa][[37mINFO[0m] Gathering read lengths...
+[2021-10-20][16:56:11][rasusa][[37mINFO[0m] 307569316 reads detected in the first input
+[2021-10-20][16:56:39][rasusa][[37mINFO[0m] Keeping 100386531 reads from each input
