@@ -53,7 +53,7 @@ alignment2Fasta <- function(alignment, filename) {
   
   sink(NULL)
 }
-alignment2Fasta(aligned_save, 'aligned_fish_mtDNA.fa')
+alignment2Fasta(aligned_save, './mtGenome/aligned_fish_mtDNA.fa')
 
 aligned <- aligned_save %>% 
   msaConvert(type = 'phangorn::phyDat') %>%
@@ -81,14 +81,14 @@ fish_ml <- pml(fish_nj, aligned, k = 4) %>%
             rearrangement = "stochastic")
 
 fish_bs <- bootstrap.pml(fish_ml, bs = 10000, 
-                           optGamma = TRUE, optInv = TRUE, optNni = TRUE,
-                           optBf = TRUE, optQ = TRUE, optEdge = TRUE,
-                           multicore = Sys.info()['sysname'] != 'Windows', 
-                           mc.cores = detectCores(),
-                           control = pml.control(trace = 1))
-pdf('basic_tree.pdf', height = 7, width = 7)
+                         optGamma = TRUE, optInv = TRUE, optNni = TRUE,
+                         optBf = TRUE, optQ = TRUE, optEdge = TRUE,
+                         multicore = Sys.info()['sysname'] != 'Windows', 
+                         mc.cores = detectCores(),
+                         control = pml.control(trace = 1))
+pdf('./mtGenome/basic_tree.pdf', height = 7, width = 7)
 tree_dat <- plotBS(midpoint(fish_ml$tree), fish_bs, p = 0, type="phylogram")
 dev.off()
 
-write.tree(midpoint(fish_ml$tree), file="ml_fish.tre")
-write.tree(fish_bs, file="bootstrap_fish.tre")
+write.tree(midpoint(fish_ml$tree), file="./mtGenome/ml_fish.tre")
+write.tree(fish_bs, file="./mtGenome/bootstrap_fish.tre")

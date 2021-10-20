@@ -66,9 +66,14 @@ sbatch --array=0-1 \
   Reference_Sequence/chya_co1.fasta
 
 ```
-Annotate both assembled circular mtGenomes with: http://mitofish.aori.u-tokyo.ac.jp/annotation/input.html. Seems like there is an issue with the 33 kmer assemblies since the d-loop is split into 4 chunks and
+Annotate both assembled circular mtGenomes with: http://mitofish.aori.u-tokyo.ac.jp/annotation/input.html. Seems like there is an issue with the 33 kmer assemblies since the d-loop is split into 4 chunks
 
-
+Make a Tree with all the full mitochondrial sequences found on mitofish website. See if it passes the "smell test"
+```
+sbatch -o SLURM_out/mitoTree-%j.out \
+  scripts/runRscript.sbatch \
+  scripts/mito_tree.R
+```
 
 
 Also try:
