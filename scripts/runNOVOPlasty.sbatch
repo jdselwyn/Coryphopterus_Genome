@@ -38,7 +38,7 @@ printf 'Project: \n' > mito.config
 printf '1\b----------------------- \n' >> mito.config
 printf 'Project name          = %s\n' ${inBase} >> mito.config
 printf 'Type                  = mito\n' >> mito.config
-printf 'Genome Range          = 18000-22000\n' >> mito.config
+printf 'Genome Range          = 14000-25000\n' >> mito.config
 printf 'K-mer                 = %s\n' ${bestK} >> mito.config
 printf 'Max memory            = \n' >> mito.config
 printf 'Extended log          = 1\n' >> mito.config

@@ -1,3 +1,7 @@
 *.fq.gz
 *fastq.gz
 Reference_Sequence/*
+*/All_MitoFish/*
+*.aln
+*.dnd
+*.zip

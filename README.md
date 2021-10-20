@@ -62,12 +62,20 @@ sbatch --array=0-1 \
   scripts/runNOVOPlasty.sbatch \
   fq_fp1_clmp_fp2_fqscrn_repaired \
   30 \
-  33 \
+  75 \
   Reference_Sequence/chya_co1.fasta
 
-50118 - using 115 kmer size
-50120 - using 33 kmer size
-
 ```
+Annotate both assembled circular mtGenomes with: http://mitofish.aori.u-tokyo.ac.jp/annotation/input.html. Seems like there is an issue with the 33 kmer assemblies since the d-loop is split into 4 chunks and
+
+
+
+
+Also try:
+- https://github.com/linzhi2013/MitoZ
+- https://github.com/RemiAllio/MitoFinder
+- https://github.com/Kinggerm/GetOrganelle
+
+
 ## Step 8. SPAdes Assembly
 Must be run on ODU HPC - requires too much memory
