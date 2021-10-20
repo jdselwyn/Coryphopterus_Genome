@@ -1,0 +1,75 @@
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.2
+Author: Nicolas Dierckxsens, (c) 2015-2020
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify if everything is correct ***
+
+Project:
+----------------------
+Project name          = COPE-0922
+Type                  = mito
+Genome range          = 18000-22000
+K-mer                 = 33
+Max memory            = 
+Extended log          = 1
+Save assembled reads  = 2
+Seed Input            = /work/hobi/jselwyn/Coryphopterus_Genome/Reference_Sequence/chya_co1.fasta
+Extend seed directly  = 
+Reference sequence    = 
+Variance detection    = 
+Chloroplast sequence  = 
+
+Dataset 1:
+----------------------
+Read Length           = 150
+Insert size           = 300
+Platform              = illumina
+Single/Paired         = PE
+Combined reads        = 
+Forward reads         = COPE-0922.sub.r1.fq.gz
+Reverse reads         = COPE-0922.sub.r2.fq.gz
+
+Heteroplasmy:
+-----------------------
+Heteroplasmy          = 
+HP exclude list       = 
+PCR-free              = 
+
+Optional:
+----------------------
+Insert size auto      = yes
+Use Quality Scores    = 
+
+Subsampled fraction: 100.00 %
+
+Retrieve Seed...
+
+Initial read retrieved successfully: CTAAGCTTGCTTATTCGAGCTGAGCTAAGCCAACCAGGGGCGCTCCTAGGGGATGACCAAATTTATAATGTAATCGTAACTGCTCACGCATTCGTTATAATCTTCTTTATAGTAATACCAATCATAATCGGCGGGTTTGGAAACTGACT
+
+Start Assembly...
+
+
+------------Assembly 1 finished: Contigs are automatically merged in Merged_contigs file------------
+
+Contig 01                  : 22038 bp
+
+Total contigs              : 1
+Largest contig             : 22038 bp
+Smallest contig            : 22038 bp
+Average insert size        : 425 bp
+
+
+-----------------------------------------Input data metrics-----------------------------------------
+
+Total reads                : 200773260
+Aligned reads              : 154498
+Assembled reads            : 146762
+Average organelle coverage : 1052
+
+-----------------------------------------------------------------------------------------------------
+
