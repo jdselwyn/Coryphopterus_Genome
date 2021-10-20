@@ -62,17 +62,18 @@ sbatch --array=0-1 \
   scripts/runNOVOPlasty.sbatch \
   fq_fp1_clmp_fp2_fqscrn_repaired \
   30 \
-  75 \
+  45 \
   Reference_Sequence/chya_co1.fasta
 
 ```
-Annotate both assembled circular mtGenomes with: http://mitofish.aori.u-tokyo.ac.jp/annotation/input.html. Seems like there is an issue with the 33 kmer assemblies since the d-loop is split into 4 chunks
+Annotate both assembled circular mtGenomes with: http://mitofish.aori.u-tokyo.ac.jp/annotation/input.html. Seems like there is an issue with the 33 kmer assemblies since the d-loop is split into 4 chunks. Initially made genome likely too large ~22k when most of the fish on mitofish are ~16k. 
 
 Make a Tree with all the full mitochondrial sequences found on mitofish website. See if it passes the "smell test"
 ```
 sbatch -o SLURM_out/mitoTree-%j.out \
   scripts/runRscript.sbatch \
   scripts/mito_tree.R
+50347
 ```
 
 

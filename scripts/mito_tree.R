@@ -4,12 +4,12 @@ suppressMessages(library(seqinr))
 suppressMessages(library(msa))
 suppressMessages(library(phangorn))
 suppressMessages(library(ips))
-
+# setwd('../')
 #### Data ####
 fish_mtdna <- list.dirs('./mtGenome') %>%
   tibble(dir = .) %>%
   rowwise(dir) %>%
-  summarise(file = list.files(path = dir, pattern = 'Contigs.*fasta$|fa$', full.names = TRUE),
+  summarise(file = list.files(path = dir, pattern = 'Circularized.*fasta$|fa$', full.names = TRUE),
             .groups = 'drop')  %>%
   # filter(str_detect(file, 'COPE')) %>%
   mutate(species = str_extract(file, 'COPE-[0-9]+|[A-Z][a-z]+_[a-z]+'),
@@ -18,12 +18,15 @@ fish_mtdna <- list.dirs('./mtGenome') %>%
   select(-dir) %>%
   rowwise(file, species) %>%
   summarise(sequence = seqinr::read.fasta(file, seqonly = TRUE) %>% unlist, .groups = 'keep') %>%
+  mutate(length = str_length(sequence)) %>%
+  filter(length > 10000) %>%
   filter(n() == 1) %>%
   ungroup %>%
-  mutate(length = str_length(sequence))
+  mutate(length = str_length(sequence)) %>%
+  arrange(str_detect(species, 'COPE', negate = TRUE))
 
 fish_mtdna %>%
-  dplyr::slice(-1:-2) %>%
+  filter(str_detect(species, 'COPE', negate = TRUE)) %>%
   summarise(mean_length = mean(length),
             sd_length = sd(length),
             min_length = min(length),
@@ -31,7 +34,7 @@ fish_mtdna %>%
 
 #### Align Sequences ####
 aligned <- fish_mtdna %>%
-  # dplyr::slice(c(1, 2, sample(nrow(.), 5))) %>%
+  dplyr::slice(c(1, sample(nrow(.), 5))) %>%
   distinct %$%
   set_names(sequence, species) %>%
   DNAStringSet() %>%
