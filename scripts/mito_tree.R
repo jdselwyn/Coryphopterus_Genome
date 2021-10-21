@@ -4,7 +4,9 @@ suppressMessages(library(seqinr))
 suppressMessages(library(msa))
 suppressMessages(library(phangorn))
 suppressMessages(library(ips))
-# setwd('../')
+
+if(Sys.info()['sysname'] == 'Windows'){setwd('../')}
+
 #### Data ####
 fish_mtdna <- list.dirs('./mtGenome') %>%
   tibble(dir = .) %>%
@@ -33,8 +35,6 @@ fish_mtdna %>%
             max_length = max(length))
 
 #### Align Sequences ####
-
-
 if(Sys.info()['sysname'] != 'Windows'){
   aligned <- fish_mtdna %>%
     distinct %$%
@@ -62,7 +62,7 @@ if(Sys.info()['sysname'] != 'Windows'){
   alignment2Fasta(aligned_save, './mtGenome/aligned_fish_mtDNA.fa')
 } else {
   aligned <- fish_mtdna %>%
-    dplyr::slice(c(1, sample(nrow(.), 5))) %>%
+    dplyr::slice(c(1, sample(nrow(.), 10))) %>%
     distinct %$%
     set_names(sequence, species) %>%
     DNAStringSet() %>%

@@ -73,7 +73,7 @@ Make a Tree with all the full mitochondrial sequences found on mitofish website.
 sbatch -o SLURM_out/mitoTree-%j.out \
   scripts/runRscript.sbatch \
   scripts/mito_tree.R
-50347
+
 ```
 
 
