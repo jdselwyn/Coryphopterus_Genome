@@ -61,7 +61,7 @@ sbatch --array=0-1 \
   --output=SLURM_out/mtGenome_%A_%a.out \
   scripts/runNOVOPlasty.sbatch \
   fq_fp1_clmp_fp2_fqscrn_repaired \
-  30 \
+  50 \
   45 \
   Reference_Sequence/chya_co1.fasta
 

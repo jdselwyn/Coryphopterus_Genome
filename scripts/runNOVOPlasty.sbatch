@@ -19,7 +19,7 @@ readarray -t INDIVIDUALS < <(cut -d, -f2 base_names) #Read in that individual in
 inBase=${INDIVIDUALS[${SLURM_ARRAY_TASK_ID}]}
 
 outDir=mtGenome
-mkdir -p ${outDir}/${inBase}_${bestK}
+mkdir -p ${outDir}/${inBase}_${bestK}_${coverage}
 
 inDir=$(pwd)/${inDir}
 outDir=$(pwd)/${outDir}
