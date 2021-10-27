@@ -1,0 +1,72 @@
+LOCUS       Annotations                                             21-OCT-2021
+UNIMARK     Annotations
+FEATURES             Location/Qualifiers
+     misc_feature    complement(2..379)
+                     /ugene_name="nad1"
+     misc_feature    complement(393..462)
+                     /ugene_name="trnI(atc)"
+     misc_feature    complement(461..531)
+                     /ugene_name="trnQ(caa)"
+     misc_feature    complement(531..601)
+                     /ugene_name="trnM(atg)"
+     misc_feature    complement(604..1644)
+                     /ugene_name="nad2"
+     misc_feature    complement(1659..1729)
+                     /ugene_name="trnW(tga)"
+     misc_feature    complement(1732..1800)
+                     /ugene_name="trnA(gca)"
+     misc_feature    complement(1804..1876)
+                     /ugene_name="trnN(aac)"
+     misc_feature    complement(1912..1977)
+                     /ugene_name="trnC(tgc)"
+     misc_feature    complement(1978..2047)
+                     /ugene_name="trnY(tac)"
+     misc_feature    complement(2055..3590)
+                     /ugene_name="cox1"
+     misc_feature    complement(3603..3674)
+                     /ugene_name="trnS2(tca)"
+     misc_feature    complement(3678..3748)
+                     /ugene_name="trnD(gac)"
+     misc_feature    complement(3752..4435)
+                     /ugene_name="cox2"
+     misc_feature    complement(4514..4675)
+                     /ugene_name="atp8"
+     misc_feature    complement(4672..5352)
+                     /ugene_name="atp6"
+     misc_feature    complement(5355..6140)
+                     /ugene_name="cox3"
+     misc_feature    complement(6142..6211)
+                     /ugene_name="trnG(gga)"
+     misc_feature    complement(6209..6556)
+                     /ugene_name="nad3"
+     misc_feature    complement(6558..6626)
+                     /ugene_name="trnR(cga)"
+     misc_feature    complement(6627..6920)
+                     /ugene_name="nad4l"
+     misc_feature    complement(6917..8287)
+                     /ugene_name="nad4"
+     misc_feature    complement(8298..8367)
+                     /ugene_name="trnH(cac)"
+     misc_feature    complement(8377..8448)
+                     /ugene_name="trnS1(agc)"
+     misc_feature    complement(8449..8521)
+                     /ugene_name="trnL1(cta)"
+     misc_feature    complement(8545..10347)
+                     /ugene_name="nad5"
+     misc_feature    complement(10356..10874)
+                     /ugene_name="nad6"
+     misc_feature    complement(10875..10943)
+                     /ugene_name="trnE(gaa)"
+     misc_feature    complement(10949..12079)
+                     /ugene_name="cob"
+     misc_feature    complement(12915..12983)
+                     /ugene_name="trnP(cca)"
+     misc_feature    complement(13217..13285)
+                     /ugene_name="trnF(ttc)"
+     misc_feature    complement(13312..14259)
+                     /ugene_name="rrnS"
+     misc_feature    complement(14259..14330)
+                     /ugene_name="trnV(gta)"
+     misc_feature    complement(14332..15842)
+                     /ugene_name="rrnL"
+//

@@ -1,0 +1,4 @@
+>Contig1
+trnI -trnQ trnM nad2 trnW -trnA -trnN -OL -trnC -trnY cox1 -trnS2 trnD cox2 atp8 atp6 cox3 trnG nad3 trnR nad4l nad4 trnH trnS1 trnL1 nad5 -nad6 -trnE cob OH_1 OH_0 -trnP trnF rrnS trnV rrnL nad1 
+>Contig2
+rrnL trnK trnT trnL2 nad1 

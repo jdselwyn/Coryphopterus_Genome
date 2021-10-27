@@ -30,7 +30,7 @@ ref_seq=''
 in1=$(ls ${inDir}/${inBase}*gz | grep r1)
 in2=$(ls ${inDir}/${inBase}*gz | grep r2)
 
-cd ${outDir}/${inBase}_${bestK}
+cd ${outDir}/${inBase}_${bestK}_${coverage}
 
 rasusa --input ${in1} ${in2} --coverage ${coverage} --genome-size 1gb --output ${inBase}.sub.r1.fq.gz ${inBase}.sub.r2.fq.gz 1> subsample.log
 

@@ -68,12 +68,16 @@ sbatch --array=0-1 \
 ```
 Annotate both assembled circular mtGenomes with: http://mitofish.aori.u-tokyo.ac.jp/annotation/input.html. Seems like there is an issue with the 33 kmer assemblies since the d-loop is split into 4 chunks. Initially made genome likely too large ~22k when most of the fish on mitofish are ~16k. Increasing the kmer length to 75 seems to have made it circularize into a more realistic looking genome. However there are two contigs which I'm not sure yet what to do with. It says to "Check manually if the two contigs overlap to merge them together!"
 
+Mitofish seemed to stop working (21-Oct-21) so use MITOS web server temporarily until one is installed on HPC.
+
+Based on MITOS it looks like the first contig is missing trnK, trnL2, and trnT all of which are found on the second contig along with rrnL. So maybe align second contig with first only for rrnL part then insert the rest in between??
+
 Make a Tree with all the full mitochondrial sequences found on mitofish website. See if it passes the "smell test"
 ```
 sbatch -o SLURM_out/mitoTree-%j.out \
   scripts/runRscript.sbatch \
   scripts/mito_tree.R
-
+50369
 ```
 
 
