@@ -73,6 +73,8 @@ Mitofish seemed to stop working (21-Oct-21) so use MITOS web server temporarily 
 Based on MITOS it looks like the first contig is missing trnK, trnL2, and trnT all of which are found on the second contig along with rrnL. So maybe align second contig with first only for rrnL part then insert the rest in between??
 
 Make a Tree with all the full mitochondrial sequences found on mitofish website. See if it passes the "smell test"
+
+Increasing coverage passed through to 50x resulted in a single circularized contig for both specimens with genes in the same order.
 ```
 sbatch -o SLURM_out/mitoTree-%j.out \
   scripts/runRscript.sbatch \
