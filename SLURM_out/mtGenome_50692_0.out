@@ -1,0 +1,4 @@
+/cm/local/apps/slurm/var/spool/job50693/slurm_script: line 33: cd: /work/hobi/jselwyn/Coryphopterus_Genome/mtGenome/COPE-0773_45_50: No such file or directory
+[2021-10-27][11:18:07][rasusa][[37mINFO[0m] Target number of bases to subsample to is: 50000000000
+[2021-10-27][11:18:07][rasusa][[37mINFO[0m] Gathering read lengths...
+slurmstepd: error: *** JOB 50693 ON hpcc04 CANCELLED AT 2021-10-27T11:20:19 ***
