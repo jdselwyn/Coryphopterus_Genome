@@ -5,9 +5,15 @@ out_fasta <- args[2]
 # in_fasta <- 'mtGenome/fish_mitogenomes.fasta'
 # out_fasta <- 'mtGenome/aligned_fish_mitogenomes.fasta'
 
-library(msa)
-library(Biostrings)
-library(magrittr)
+start_dir <- getwd()
+in_fasta <- paste0(start_dir, '/', in_fasta)
+out_fasta <- paste0(start_dir, '/', out_fasta)
+
+setwd('/tmp')
+
+suppressMessages(library(msa))
+suppressMessages(library(Biostrings))
+suppressMessages(library(magrittr))
 
 aligned <- readDNAStringSet(in_fasta) %>%
   msa(type = 'DNA', verbose = TRUE, order = 'input')

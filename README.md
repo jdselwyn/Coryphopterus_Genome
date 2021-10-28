@@ -82,20 +82,22 @@ After annotating circularized & single contig genome (50x coverage, 45 kmer) wit
 Align sequences using:
 ```
 #Only those also in FishPhyloMaker
-sbatch -o SLURM_out/mitoTree-%j.out \
+sbatch -o SLURM_out/alignment-%j.out \
   --job-name=Alignment \
   scripts/runRscript.sbatch \
-  scripts/mito_tree.R \
+  scripts/align_fasta.R \
   mtGenome/fish_mitogenomes.fasta \
   mtGenome/aligned_fish_mitogenomes.fasta
+50781
 
 # All Gobiidae
-sbatch -o SLURM_out/mitoTree-%j.out \
+sbatch -o SLURM_out/alignment-%j.out \
   --job-name=Alignment \
   scripts/runRscript.sbatch \
-  scripts/mito_tree.R \
+  scripts/align_fasta.R \
   mtGenome/gobiidae_mitogenomes.fasta \
   mtGenome/aligned_gobiidae_mitogenomes.fasta
+50782
 ```
 
 
