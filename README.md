@@ -75,11 +75,27 @@ Based on MITOS it looks like the first contig is missing trnK, trnL2, and trnT a
 Make a Tree with all the full mitochondrial sequences found on mitofish website. See if it passes the "smell test"
 
 Increasing coverage passed through to 50x resulted in a single circularized contig for both specimens with genes in the same order.
+
+
+After annotating circularized & single contig genome (50x coverage, 45 kmer) with http://mitofish.aori.u-tokyo.ac.jp/annotation/input.html use `utils/taxonomy_mitofish.R` to produce two fastas. One with all the mitochondrial genomes of Gobiidae in the mitofish database and one with only the subset of those which also are found in the `FishPhyloMaker` R package. Both also include the post-mitofish circularized genome since this ensures they at least start in the same place.
+
+Align sequences using:
 ```
+#Only those also in FishPhyloMaker
 sbatch -o SLURM_out/mitoTree-%j.out \
+  --job-name=Alignment \
   scripts/runRscript.sbatch \
-  scripts/mito_tree.R
-50369
+  scripts/mito_tree.R \
+  mtGenome/fish_mitogenomes.fasta \
+  mtGenome/aligned_fish_mitogenomes.fasta
+
+# All Gobiidae
+sbatch -o SLURM_out/mitoTree-%j.out \
+  --job-name=Alignment \
+  scripts/runRscript.sbatch \
+  scripts/mito_tree.R \
+  mtGenome/gobiidae_mitogenomes.fasta \
+  mtGenome/aligned_gobiidae_mitogenomes.fasta
 ```
 
 
