@@ -1,0 +1,23 @@
+scripts/align_fasta.R
+use default substitution matrix
+params: . -INFILE=internalRsequence -CLUSTERING=nj  GAPOPEN=15  GAPEXT=6.66  NUMITER=3  TYPE=dna  OUTORDER=input
+Sequence 1: Seq1       19325 bp
+Sequence 2: Seq2       19325 bp
+Sequence 3: Seq3       19325 bp
+Sequence 4: Seq4       19325 bp
+Sequence 5: Seq5       19325 bp
+Sequence 6: Seq6       19325 bp
+Sequence 7: Seq7       19325 bp
+Sequence 8: Seq8       19325 bp
+Sequence 9: Seq9       19325 bp
+Sequence 10: Seq10      19325 bp
+Sequence 11: Seq11      19325 bp
+Sequence 12: Seq12      19325 bp
+Sequence 13: Seq13      19325 bp
+Sequence 14: Seq14      19325 bp
+Sequence 15: Seq15      19325 bp
+Sequence 16: Seq16      19325 bp
+Sequence 17: Seq17      19325 bp
+Sequence 18: Seq18      19325 bp
+Sequence 19: Seq19      19325 bp
+slurmstepd: error: *** JOB 50790 ON hpcc01 CANCELLED AT 2021-10-28T17:09:28 ***
