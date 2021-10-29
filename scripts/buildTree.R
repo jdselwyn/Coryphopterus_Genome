@@ -42,11 +42,11 @@ fish_ml <- pml(fish_nj, alignment, k = 4) %>%
 
 fish_bs <- bootstrap.pml(fish_ml, 
                          bs = if_else(Sys.info()['sysname'] != 'Windows',
-                                      NBOOT, 10), 
+                                      NBOOT, 10L), 
                          optGamma = TRUE, optInv = TRUE, optNni = TRUE,
                          optBf = TRUE, optQ = TRUE, optEdge = TRUE,
                          multicore = Sys.info()['sysname'] != 'Windows', 
-                         mc.cores = if_else(Sys.info()['sysname'] != 'Windows', parallel::detectCores(), 1),
+                         mc.cores = if_else(Sys.info()['sysname'] != 'Windows', parallel::detectCores(), 1L),
                          control = pml.control(trace = 1))
 
 #### Output Tree ####

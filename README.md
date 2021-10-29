@@ -62,7 +62,7 @@ sbatch --array=0-1 \
   scripts/runNOVOPlasty.sbatch \
   fq_fp1_clmp_fp2_fqscrn_repaired \
   50 \
-  75 \
+  30 \
   Reference_Sequence/chya_co1.fasta
 
 ```
@@ -131,4 +131,4 @@ Also try:
 
 ## Step 8. SPAdes Assembly
 Must be run on ODU HPC - requires too much memory
-In ODU queue as on 29-Oct-21 
+In ODU queue as on 29-Oct-21
