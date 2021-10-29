@@ -39,15 +39,17 @@ fish_ml <- pml(fish_nj, alignment, k = 4) %>%
             optBf = TRUE, optQ = TRUE, optEdge = TRUE,
             rearrangement = "stochastic")
 
-
+#looks like parallel doesn't work
 fish_bs <- bootstrap.pml(fish_ml, 
                          bs = if_else(Sys.info()['sysname'] != 'Windows',
                                       NBOOT, 10L), 
                          optGamma = TRUE, optInv = TRUE, optNni = TRUE,
                          optBf = TRUE, optQ = TRUE, optEdge = TRUE,
-                         multicore = Sys.info()['sysname'] != 'Windows', 
-                         mc.cores = if_else(Sys.info()['sysname'] != 'Windows', parallel::detectCores(), 1L),
+                         multicore = FALSE, 
+                         mc.cores = 1L,
                          control = pml.control(trace = 1))
+
+# if_else(Sys.info()['sysname'] != 'Windows', parallel::detectCores(), 1L)
 
 #### Output Tree ####
 write.tree(fish_ml$tree, file = str_c(out_prefix, '_ml.tre'))
