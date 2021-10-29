@@ -105,13 +105,12 @@ Make Tree
 # Only those also in FishPhyloMaker
 sbatch -o SLURM_out/tree-%j.out \
   --job-name=Tree \
-  --dependency=afterany:50866 \
   scripts/runRscript.sbatch \
   scripts/buildTree.R \
   mtGenome/aligned_fish_mitogenomes.fasta \
   mtGenome/fish \
   10000
-50867
+
 
 # All Gobiidae
 sbatch -o SLURM_out/tree-%j.out \
@@ -121,7 +120,7 @@ sbatch -o SLURM_out/tree-%j.out \
   mtGenome/aligned_gobiidae_mitogenomes.fasta \
   mtGenome/gobiidae \
   10000
-50865
+
 ```
 
 Also try:
@@ -132,3 +131,4 @@ Also try:
 
 ## Step 8. SPAdes Assembly
 Must be run on ODU HPC - requires too much memory
+In ODU queue as on 29-Oct-21 

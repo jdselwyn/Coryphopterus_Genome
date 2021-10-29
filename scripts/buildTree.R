@@ -51,7 +51,7 @@ fish_bs <- bootstrap.pml(fish_ml,
 
 #### Output Tree ####
 write.tree(fish_ml$tree, file = str_c(out_prefix, '_ml.tre'))
-write.tree(fish_bs, file = str_c(out_prefix, '_bootstrap', NBOOT, '.png'))
+write.tree(fish_bs, file = str_c(out_prefix, '_bootstrap', NBOOT, '.tre'))
 
 get_support <- function(tree, bs_tree){
   bs_tree <- .uncompressTipLabel(bs_tree)
@@ -70,11 +70,11 @@ base_tree <- fish_ml$tree %>%
   get_support(fish_bs) %>%
   as_tbl_graph(directed = TRUE) %>%
   mutate(name = str_remove(name, 'N[0-9]+_')) %>%
-  create_layout(layout='dendrogram') %>%
+  create_layout(layout = 'dendrogram') %>%
   ggraph() +
   geom_edge_elbow(show.legend = FALSE) +
-  geom_node_text(aes(label = name),size=4,
-                 show.legend = TRUE, nudge_y = 0, hjust=1) +
+  geom_node_text(aes(label = name), size = 4,
+                 show.legend = TRUE, nudge_y = 0, hjust = 1) +
   # labs(colour = 'Distance to Coryphopterus') +
   scale_y_reverse() +
   coord_flip() +
