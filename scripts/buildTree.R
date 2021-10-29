@@ -6,11 +6,13 @@ NBOOT <- as.integer(args[3])
 ##TODO - right now assume's GTR+G+I is going to be best model - sort out way to fill in settings based on what the nucleic model test finds
 
 # aligned_fasta <- 'mtGenome/fish_mitogenomes.fasta'
-# out_prefix <- mtGenome/fish_mlTree
+# out_prefix <- 'mtGenome/fish_mlTree'
 
 suppressMessages(library(tidyverse))
 suppressMessages(library(magrittr))
 suppressMessages(library(phangorn))
+suppressMessages(library(ggraph))
+suppressMessages(library(tidygraph))
 
 alignment <- adegenet::fasta2DNAbin(aligned_fasta, snpOnly = FALSE) %>%
   as.phyDat()
@@ -29,7 +31,7 @@ fish_nj <- nj(dna_dist)
 plot(fish_nj)
 
 
-#ML tree
+#### ML tree ####
 fish_ml <- pml(fish_nj, alignment, k = 4) %>%
   optim.pml(., model = "GTR", optGamma = TRUE, optInv = TRUE, optNni = TRUE,
             optBf = TRUE, optQ = TRUE, optEdge = TRUE,
@@ -45,39 +47,36 @@ fish_bs <- bootstrap.pml(fish_ml,
                          mc.cores = detectCores(),
                          control = pml.control(trace = 1))
 
-
-png(str_c(out_prefix, '_simple.png'), height = 15, width = 7)
-tree_dat <- plotBS(midpoint(fish_ml$tree), fish_bs, p = 0, type="phylogram")
-dev.off()
-
-write.tree(midpoint(fish_ml$tree), file = str_c(out_prefix, '_ml.tre'))
+#### Output Tree ####
+write.tree(fish_ml$tree, file = str_c(out_prefix, '_ml.tre'))
 write.tree(fish_bs, file = str_c(out_prefix, '_bootstrap', NBOOT, '.png'))
 
-# library(ggraph)
-# library(tidygraph)
-# 
-# midpoint(fish_ml$tree) %>%
-#   as_tbl_graph(directed = TRUE) %>%
-#   mutate(name = if_else(str_detect(name, 'Node'), '', name)) %>%
-#   # mutate(distance_to_cope = node_distance_to(name %in% c('Gobiiformes', 'Gobiidae', 'Coryphopterus', 'Coryphopterus hyalinus'), 
-#   #                                            mode = 'all')) %>%
-#   create_layout(layout='dendrogram') %>%
-#   ggraph() +
-#   geom_edge_elbow(show.legend = FALSE) +
-#   geom_node_text(aes(label = name),size=4, 
-#                  show.legend = TRUE, nudge_y = 0, hjust=1) +
-#   # labs(colour = 'Distance to Coryphopterus') +
-#   scale_y_reverse() +
-#   coord_flip() +
-#   theme_void() +
-#   theme(legend.position = 'bottom')
-# 
-# fish_ml_store <- fish_ml
-# fish_ml$tree$node.label
-# 
-# fish_ml$tree$Nnode
-# fish_bs[[1]]
+get_support <- function(tree, bs_tree){
+  bs_tree <- .uncompressTipLabel(bs_tree)
+  if (any(is.rooted(bs_tree))){
+    bs_tree <- unroot(bs_tree)
+  } 
+  
+  x <- prop.clades(tree, bs_tree)
+  x <- (x/length(bs_tree)) * 100
+  tree$node.label <- str_c('N', 1:length(x), '_', x)
+  tree
+}
 
-tree$node.label <- c("", round(runif(17-1), 3))
+base_tree <- fish_ml$tree %>%
+  midpoint %>%
+  get_support(fish_bs) %>%
+  as_tbl_graph(directed = TRUE) %>%
+  mutate(name = str_remove(name, 'N[0-9]+_')) %>%
+  create_layout(layout='dendrogram') %>%
+  ggraph() +
+  geom_edge_elbow(show.legend = FALSE) +
+  geom_node_text(aes(label = name),size=4,
+                 show.legend = TRUE, nudge_y = 0, hjust=1) +
+  # labs(colour = 'Distance to Coryphopterus') +
+  scale_y_reverse() +
+  coord_flip() +
+  theme_void() +
+  theme(legend.position = 'bottom')
+ggsave(str_c(out_prefix, '_simple.png'), plot = base_tree, height = 15, width = 7)
 
-pruneTree(fish_ml$tree, 0.5)
