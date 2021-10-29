@@ -88,7 +88,7 @@ sbatch -o SLURM_out/alignment-%j.out \
   scripts/align_fasta.R \
   mtGenome/fish_mitogenomes.fasta \
   mtGenome/aligned_fish_mitogenomes.fasta
-50781
+50790
 
 # All Gobiidae
 sbatch -o SLURM_out/alignment-%j.out \
@@ -97,7 +97,7 @@ sbatch -o SLURM_out/alignment-%j.out \
   scripts/align_fasta.R \
   mtGenome/gobiidae_mitogenomes.fasta \
   mtGenome/aligned_gobiidae_mitogenomes.fasta
-50782
+50791
 ```
 
 
