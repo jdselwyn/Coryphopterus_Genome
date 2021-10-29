@@ -1,0 +1,19 @@
+scripts/buildTree.R
+
+ Converting FASTA alignment into a DNAbin object... 
+
+
+ Finding the size of a single genome... 
+
+
+ genome size is: 19,250 nucleotides 
+
+( 2  lines per genome )
+
+ Importing sequences... 
+..............................
+ Forming final object... 
+
+...done.
+
+slurmstepd: error: *** JOB 50867 ON hpcc03 CANCELLED AT 2021-10-29T14:14:54 ***
