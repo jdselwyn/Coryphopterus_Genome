@@ -5,8 +5,8 @@ NBOOT <- as.integer(args[3])
 
 ##TODO - right now assume's GTR+G+I is going to be best model - sort out way to fill in settings based on what the nucleic model test finds
 
-# aligned_fasta <- 'mtGenome/fish_mitogenomes.fasta'
-# out_prefix <- 'mtGenome/fish_mlTree'
+# aligned_fasta <- '../mtGenome/aligned_gobiidae_mitogenomes.fasta'
+# out_prefix <- '../mtGenome/gobiidae_mlTree'
 
 suppressMessages(library(tidyverse))
 suppressMessages(library(magrittr))
@@ -17,8 +17,10 @@ suppressMessages(library(tidygraph))
 alignment <- adegenet::fasta2DNAbin(aligned_fasta, snpOnly = FALSE) %>%
   as.phyDat()
 
+
 #### Nucleotide Model ####
-mt <- modelTest(alignment, multicore = Sys.info()['sysname'] != 'Windows') %>%
+mt <- modelTest(alignment, 
+                multicore = FALSE) %>%
   as_tibble %>%
   arrange(BIC) %T>%
   print
@@ -44,7 +46,7 @@ fish_bs <- bootstrap.pml(fish_ml,
                          optGamma = TRUE, optInv = TRUE, optNni = TRUE,
                          optBf = TRUE, optQ = TRUE, optEdge = TRUE,
                          multicore = Sys.info()['sysname'] != 'Windows', 
-                         mc.cores = detectCores(),
+                         mc.cores = if_else(Sys.info()['sysname'] != 'Windows', parallel::detectCores(), 1L),
                          control = pml.control(trace = 1))
 
 #### Output Tree ####
