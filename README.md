@@ -110,7 +110,7 @@ sbatch -o SLURM_out/tree-%j.out \
   mtGenome/aligned_fish_mitogenomes.fasta \
   mtGenome/fish \
   10000
-
+50868
 
 # All Gobiidae
 sbatch -o SLURM_out/tree-%j.out \
@@ -120,7 +120,7 @@ sbatch -o SLURM_out/tree-%j.out \
   mtGenome/aligned_gobiidae_mitogenomes.fasta \
   mtGenome/gobiidae \
   10000
-
+50869
 ```
 
 Also try:
