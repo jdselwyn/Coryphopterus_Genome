@@ -62,7 +62,7 @@ sbatch --array=0-1 \
   scripts/runNOVOPlasty.sbatch \
   fq_fp1_clmp_fp2_fqscrn_repaired \
   50 \
-  45 \
+  75 \
   Reference_Sequence/chya_co1.fasta
 
 ```
@@ -81,14 +81,14 @@ After annotating circularized & single contig genome (50x coverage, 45 kmer) wit
 
 Align sequences using:
 ```
-#Only those also in FishPhyloMaker
+# Only those also in FishPhyloMaker
 sbatch -o SLURM_out/alignment-%j.out \
   --job-name=Alignment \
   scripts/runRscript.sbatch \
   scripts/align_fasta.R \
   mtGenome/fish_mitogenomes.fasta \
   mtGenome/aligned_fish_mitogenomes.fasta
-50790
+
 
 # All Gobiidae
 sbatch -o SLURM_out/alignment-%j.out \
@@ -100,6 +100,26 @@ sbatch -o SLURM_out/alignment-%j.out \
 50791
 ```
 
+Make Tree
+```
+# Only those also in FishPhyloMaker
+sbatch -o SLURM_out/tree-%j.out \
+  --job-name=Tree \
+  scripts/runRscript.sbatch \
+  scripts/buildTree.R \
+  mtGenome/aligned_fish_mitogenomes.fasta \
+  mtGenome/fish \
+  10000
+
+# All Gobiidae
+sbatch -o SLURM_out/tree-%j.out \
+  --job-name=Tree \
+  scripts/runRscript.sbatch \
+  scripts/buildTree.R \
+  mtGenome/aligned_gobiidae_mitogenomes.fasta \
+  mtGenome/gobiidae \
+  10000
+```
 
 Also try:
 - https://github.com/linzhi2013/MitoZ
