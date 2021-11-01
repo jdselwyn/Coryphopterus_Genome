@@ -1,0 +1,122 @@
+scripts/buildTree.R
+
+ Converting FASTA alignment into a DNAbin object... 
+
+
+ Finding the size of a single genome... 
+
+
+ genome size is: 19,250 nucleotides 
+
+( 2  lines per genome )
+
+ Importing sequences... 
+..............................
+ Forming final object... 
+
+...done.
+
+[1] "JC+I"
+[1] "JC+G"
+[1] "JC+G+I"
+[1] "F81+I"
+[1] "F81+G"
+[1] "F81+G+I"
+[1] "K80+I"
+[1] "K80+G"
+[1] "K80+G+I"
+[1] "HKY+I"
+[1] "HKY+G"
+[1] "HKY+G+I"
+[1] "SYM+I"
+[1] "SYM+G"
+[1] "SYM+G+I"
+[1] "GTR+I"
+[1] "GTR+G"
+[1] "GTR+G+I"
+# A tibble: 24 × 8
+   Model      df   logLik     AIC      AICw    AICc     AICcw     BIC
+   <chr>   <dbl>    <dbl>   <dbl>     <dbl>   <dbl>     <dbl>   <dbl>
+ 1 GTR+G+I    45 -167752. 335595. 1   e+  0 335595. 1   e+  0 335949.
+ 2 HKY+G+I    41 -167809. 335700. 1.34e- 23 335700. 1.36e- 23 336022.
+ 3 HKY+G      40 -168135. 336351. 7.09e-165 336351. 7.25e-165 336665.
+ 4 GTR+G      44 -168188. 336463. 2.23e-189 336464. 2.24e-189 336809.
+ 5 SYM+G+I    42 -169054. 338192. 0         338192. 0         338522.
+ 6 SYM+G      41 -169399. 338880. 0         338881. 0         339203.
+ 7 K80+G+I    38 -170971. 342018. 0         342018. 0         342317.
+ 8 K80+G      37 -171378. 342830. 0         342830. 0         343121.
+ 9 GTR+I      44 -171822. 343733. 0         343733. 0         344079.
+10 HKY+I      40 -172328. 344737. 0         344737. 0         345051.
+# … with 14 more rows
+optimize edge weights:  -180676.7 --> -177951.8 
+optimize base frequencies:  -177951.8 --> -176105.5 
+optimize rate matrix:  -176105.5 --> -171549.7 
+optimize invariant sites:  -171549.7 --> -168610.5 
+optimize shape parameter:  -168610.5 --> -168610.5 
+optimize edge weights:  -168610.5 --> -168364.8 
+optimize topology:  -168364.8 --> -168353.6 
+optimize topology:  -168353.6 --> -168353.6 
+1 
+optimize base frequencies:  -168353.6 --> -168288.9 
+optimize rate matrix:  -168288.9 --> -168038.9 
+optimize invariant sites:  -168038.9 --> -168037.5 
+optimize shape parameter:  -168037.5 --> -168029.1 
+optimize edge weights:  -168029.1 --> -167990.5 
+optimize topology:  -167990.5 --> -167990.4 
+0 
+[1] "Ratchet iteration  1 , best pscore so far: -167990.399994246"
+[1] "Ratchet iteration  2 , best pscore so far: -167990.399994246"
+[1] "Ratchet iteration  3 , best pscore so far: -167990.399861684"
+[1] "Ratchet iteration  4 , best pscore so far: -167990.399861684"
+[1] "Ratchet iteration  5 , best pscore so far: -167990.399861684"
+[1] "Ratchet iteration  6 , best pscore so far: -167990.399861684"
+[1] "Ratchet iteration  7 , best pscore so far: -167990.399861684"
+[1] "Ratchet iteration  8 , best pscore so far: -167990.399861684"
+[1] "Ratchet iteration  9 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  10 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  11 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  12 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  13 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  14 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  15 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  16 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  17 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  18 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  19 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  20 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  21 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  22 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  23 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  24 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  25 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  26 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  27 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  28 , best pscore so far: -167990.399698441"
+[1] "Ratchet iteration  29 , best pscore so far: -167990.399698441"
+optimize base frequencies:  -167990.4 --> -167926.7 
+optimize rate matrix:  -167926.7 --> -167870 
+optimize invariant sites:  -167870 --> -167868.8 
+optimize shape parameter:  -167868.8 --> -167858.6 
+optimize edge weights:  -167858.6 --> -167842.4 
+optimize topology:  -167842.4 --> -167842.4 
+0 
+optimize base frequencies:  -167842.4 --> -167825.4 
+optimize rate matrix:  -167825.4 --> -167805.7 
+optimize invariant sites:  -167805.7 --> -167803.3 
+optimize shape parameter:  -167803.3 --> -167795.8 
+optimize edge weights:  -167795.8 --> -167788.6 
+optimize base frequencies:  -167788.6 --> -167782.5 
+optimize rate matrix:  -167782.5 --> -167774.2 
+optimize invariant sites:  -167774.2 --> -167771.8 
+optimize shape parameter:  -167771.8 --> -167767 
+optimize edge weights:  -167767 --> -167763.2 
+optimize base frequencies:  -167763.2 --> -167760.8 
+optimize rate matrix:  -167760.8 --> -167757.1 
+optimize invariant sites:  -167757.1 --> -167755.2 
+optimize shape parameter:  -167755.2 --> -167752 
+optimize edge weights:  -167752 --> -167750.1 
+optimize base frequencies:  -167750.1 --> -167749.1 
+optimize rate matrix:  -167749.1 --> -167747.3 
+optimize invariant sites:  -167747.3 --> -167745.9 
+optimize shape parameter:  -167745.9 --> -167743.8 
+optimize edge weights:  -167743.8 --> -167742.7 

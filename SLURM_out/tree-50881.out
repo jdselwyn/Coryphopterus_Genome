@@ -1,0 +1,166 @@
+scripts/buildTree.R
+
+ Converting FASTA alignment into a DNAbin object... 
+
+
+ Finding the size of a single genome... 
+
+
+ genome size is: 19,806 nucleotides 
+
+( 2  lines per genome )
+
+ Importing sequences... 
+....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+ Forming final object... 
+
+...done.
+
+[1] "JC+I"
+[1] "JC+G"
+[1] "JC+G+I"
+[1] "F81+I"
+[1] "F81+G"
+[1] "F81+G+I"
+[1] "K80+I"
+[1] "K80+G"
+[1] "K80+G+I"
+[1] "HKY+I"
+[1] "HKY+G"
+[1] "HKY+G+I"
+[1] "SYM+I"
+[1] "SYM+G"
+[1] "SYM+G+I"
+[1] "GTR+I"
+[1] "GTR+G"
+[1] "GTR+G+I"
+# A tibble: 24 × 8
+   Model      df   logLik      AIC      AICw     AICc     AICcw      BIC
+   <chr>   <dbl>    <dbl>    <dbl>     <dbl>    <dbl>     <dbl>    <dbl>
+ 1 GTR+G+I   209 -579452. 1159322. 1   e+  0 1159327. 1   e+  0 1160972.
+ 2 HKY+G+I   205 -580002. 1160413. 1.13e-237 1160418. 1.23e-237 1162032.
+ 3 GTR+G     208 -583153. 1166722. 0         1166726. 0         1168364.
+ 4 HKY+G     204 -583313. 1167034. 0         1167039. 0         1168645.
+ 5 SYM+G+I   206 -584931. 1170274. 0         1170279. 0         1171901.
+ 6 SYM+G     205 -588118. 1176645. 0         1176650. 0         1178263.
+ 7 K80+G+I   202 -591517. 1183437. 0         1183442. 0         1185032.
+ 8 K80+G     201 -594792. 1189986. 0         1189990. 0         1191573.
+ 9 F81+G+I   204 -611681. 1223769. 0         1223774. 0         1225380.
+10 F81+G     203 -614505. 1229416. 0         1229420. 0         1231018.
+# … with 14 more rows
+optimize edge weights:  -645398.2 --> -629012.2 
+optimize base frequencies:  -629012.2 --> -622938.7 
+optimize rate matrix:  -622938.7 --> -596468.5 
+optimize invariant sites:  -596468.5 --> -584765.5 
+optimize shape parameter:  -584765.5 --> -584463.7 
+optimize edge weights:  -584463.7 --> -583818.6 
+optimize topology:  -583818.6 --> -583668.4 
+optimize topology:  -583668.4 --> -583551.7 
+optimize topology:  -583551.7 --> -583500.7 
+19 
+optimize base frequencies:  -583500.7 --> -582750.6 
+optimize rate matrix:  -582750.6 --> -581475.1 
+optimize invariant sites:  -581475.1 --> -581461.3 
+optimize shape parameter:  -581461.3 --> -581388.2 
+optimize edge weights:  -581388.2 --> -581145.8 
+optimize topology:  -581145.8 --> -581123.8 
+optimize topology:  -581123.8 --> -581118.1 
+optimize topology:  -581118.1 --> -581118 
+3 
+optimize base frequencies:  -581118 --> -580488.6 
+optimize rate matrix:  -580488.6 --> -579919.3 
+optimize invariant sites:  -579919.3 --> -579913.3 
+optimize shape parameter:  -579913.3 --> -579855.9 
+optimize edge weights:  -579855.9 --> -579726.8 
+optimize topology:  -579726.8 --> -579725.8 
+0 
+[1] "Ratchet iteration  1 , best pscore so far: -579725.813749042"
+[1] "Ratchet iteration  2 , best pscore so far: -579725.813749042"
+[1] "Ratchet iteration  3 , best pscore so far: -579725.813749042"
+[1] "Ratchet iteration  4 , best pscore so far: -579692.639431668"
+[1] "Ratchet iteration  5 , best pscore so far: -579691.63793449"
+[1] "Ratchet iteration  6 , best pscore so far: -579691.63793449"
+[1] "Ratchet iteration  7 , best pscore so far: -579691.63793449"
+[1] "Ratchet iteration  8 , best pscore so far: -579691.637450726"
+[1] "Ratchet iteration  9 , best pscore so far: -579691.637450726"
+[1] "Ratchet iteration  10 , best pscore so far: -579691.637450726"
+[1] "Ratchet iteration  11 , best pscore so far: -579691.637450726"
+[1] "Ratchet iteration  12 , best pscore so far: -579691.637450726"
+[1] "Ratchet iteration  13 , best pscore so far: -579691.637308496"
+[1] "Ratchet iteration  14 , best pscore so far: -579691.637308496"
+[1] "Ratchet iteration  15 , best pscore so far: -579691.637308496"
+[1] "Ratchet iteration  16 , best pscore so far: -579691.637308496"
+[1] "Ratchet iteration  17 , best pscore so far: -579691.581096633"
+[1] "Ratchet iteration  18 , best pscore so far: -579691.580538762"
+[1] "Ratchet iteration  19 , best pscore so far: -579691.580538762"
+[1] "Ratchet iteration  20 , best pscore so far: -579691.580538762"
+[1] "Ratchet iteration  21 , best pscore so far: -579691.580538762"
+[1] "Ratchet iteration  22 , best pscore so far: -579691.580538762"
+[1] "Ratchet iteration  23 , best pscore so far: -579691.580538762"
+[1] "Ratchet iteration  24 , best pscore so far: -579691.580538762"
+[1] "Ratchet iteration  25 , best pscore so far: -579670.988217701"
+[1] "Ratchet iteration  26 , best pscore so far: -579670.988007993"
+[1] "Ratchet iteration  27 , best pscore so far: -579670.988007993"
+[1] "Ratchet iteration  28 , best pscore so far: -579670.988007993"
+[1] "Ratchet iteration  29 , best pscore so far: -579670.988007993"
+[1] "Ratchet iteration  30 , best pscore so far: -579670.988007993"
+[1] "Ratchet iteration  31 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  32 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  33 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  34 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  35 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  36 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  37 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  38 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  39 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  40 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  41 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  42 , best pscore so far: -579670.366300582"
+[1] "Ratchet iteration  43 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  44 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  45 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  46 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  47 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  48 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  49 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  50 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  51 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  52 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  53 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  54 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  55 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  56 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  57 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  58 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  59 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  60 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  61 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  62 , best pscore so far: -579670.366251439"
+[1] "Ratchet iteration  63 , best pscore so far: -579670.366251439"
+optimize base frequencies:  -579670.4 --> -579435.4 
+optimize rate matrix:  -579435.4 --> -579247.8 
+optimize invariant sites:  -579247.8 --> -579234.4 
+optimize shape parameter:  -579234.4 --> -579197.9 
+optimize edge weights:  -579197.9 --> -579157.6 
+optimize topology:  -579157.6 --> -579157.4 
+0 
+optimize base frequencies:  -579157.4 --> -579089.2 
+optimize rate matrix:  -579089.2 --> -579036.7 
+optimize invariant sites:  -579036.7 --> -579030.6 
+optimize shape parameter:  -579030.6 --> -579020.6 
+optimize edge weights:  -579020.6 --> -579011.4 
+optimize base frequencies:  -579011.4 --> -578992.5 
+optimize rate matrix:  -578992.5 --> -578980.2 
+optimize invariant sites:  -578980.2 --> -578978.5 
+optimize shape parameter:  -578978.5 --> -578974.7 
+optimize edge weights:  -578974.7 --> -578972.5 
+optimize base frequencies:  -578972.5 --> -578967.9 
+optimize rate matrix:  -578967.9 --> -578964.6 
+optimize invariant sites:  -578964.6 --> -578964.1 
+optimize shape parameter:  -578964.1 --> -578962.8 
+optimize edge weights:  -578962.8 --> -578962.3 
+optimize base frequencies:  -578962.3 --> -578961.1 
+optimize rate matrix:  -578961.1 --> -578960.4 
+optimize invariant sites:  -578960.4 --> -578960.2 
+optimize shape parameter:  -578960.2 --> -578959.9 
+optimize edge weights:  -578959.9 --> -578959.6 
