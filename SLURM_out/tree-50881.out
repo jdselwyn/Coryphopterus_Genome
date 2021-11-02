@@ -164,3 +164,4 @@ optimize rate matrix:  -578961.1 --> -578960.4
 optimize invariant sites:  -578960.4 --> -578960.2 
 optimize shape parameter:  -578960.2 --> -578959.9 
 optimize edge weights:  -578959.9 --> -578959.6 
+slurmstepd: error: *** JOB 50881 ON hpcc11 CANCELLED AT 2021-11-02T09:09:08 ***
