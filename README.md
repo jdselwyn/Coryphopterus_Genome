@@ -108,9 +108,9 @@ sbatch -o SLURM_out/tree-%j.out \
   scripts/runRscript.sbatch \
   scripts/buildTree.R \
   mtGenome/aligned_fish_mitogenomes.fasta \
-  mtGenome/fish \
+  mtGenome/fish_sequential \
   10000
-50880
+50880 & 50882
 
 # All Gobiidae
 sbatch -o SLURM_out/tree-%j.out \
@@ -118,9 +118,9 @@ sbatch -o SLURM_out/tree-%j.out \
   scripts/runRscript.sbatch \
   scripts/buildTree.R \
   mtGenome/aligned_gobiidae_mitogenomes.fasta \
-  mtGenome/gobiidae \
+  mtGenome/gobiidae_sequential \
   10000
-50881
+50881 & 50883
 ```
 
 Also try:
