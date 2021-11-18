@@ -7,3 +7,7 @@ Reference_Sequence/*
 *.zip
 jmodeltest*/
 FigTree*/
+tmp_dir/
+*sam
+*bam
+!*sorted.bam*
