@@ -92,3 +92,5 @@ Average organelle coverage : 2962
 
 Thank you for using NOVOPlasty!
 
+slurmstepd: error: *** JOB 50875 ON hpcc01 CANCELLED AT 2021-11-02T17:02:01 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 50875 STEPD TERMINATED ON hpcc01 AT 2021-11-02T17:03:02 DUE TO JOB NOT ENDING WITH SIGNALS ***
