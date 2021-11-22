@@ -1,6 +1,0 @@
-Contig2	mitfi	rRNA	1	214	2.94700104e-15	+	.	Name=rrnL	
-Contig2	mitfi	tRNA	293	367	4.087e-10	+	.	Name=trnK(aaa)	
-Contig2	mitfi	tRNA	377	452	7.091e-09	+	.	Name=trnT(aca)	
-Contig2	mitfi	tRNA	470	543	2.618e-07	+	.	Name=trnL2(tta)	
-Contig2	mitos	gene	556	1509	211129110.6	+	.	Name=nad1
-Contig2	mitfi	tRNA	1530	1567	0.002003	+	.	Name=trnN(aat)	

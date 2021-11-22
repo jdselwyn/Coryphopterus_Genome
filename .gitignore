@@ -11,3 +11,4 @@ tmp_dir/
 *sam
 *bam
 !*sorted.bam*
+*ugenedb

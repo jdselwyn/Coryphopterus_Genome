@@ -74,10 +74,31 @@ Based on MITOS it looks like the first contig is missing trnK, trnL2, and trnT a
 
 Make a Tree with all the full mitochondrial sequences found on mitofish website. See if it passes the "smell test"
 
-Increasing coverage passed through to 50x resulted in a single circularized contig for both specimens with genes in the same order.
+Increasing coverage passed through to 50x resulted in a single circularized contig for both specimens with genes in the same order. Use K = 45 & coverage = 50x 
 
 
 After annotating circularized & single contig genome (50x coverage, 45 kmer) with http://mitofish.aori.u-tokyo.ac.jp/annotation/input.html use `utils/taxonomy_mitofish.R` to produce two fastas. One with all the mitochondrial genomes of Gobiidae in the mitofish database and one with only the subset of those which also are found in the `FishPhyloMaker` R package. Both also include the post-mitofish circularized genome since this ensures they at least start in the same place.
+
+
+Perform Error Correction initial pass:
+```
+sbatch --output=SLURM_out/mtErrorCorrect_%j.out \
+  scripts/mtErrorCorrection.sbatch \
+  mtGenome/COPE-0922_45_50/COPE_0922_mitoannotator/Circularized_assembly_1_COPE-0922.fa \
+  mtGenome/COPE-0922_45_50/Assembled_reads_COPE-0922_R1.fasta \
+  mtGenome/COPE-0922_45_50/Assembled_reads_COPE-0922_R2.fasta \
+  mtGenome/COPE-0922_45_50/COPE_0922_ma_ec \
+  COPE-0922
+
+sbatch --output=SLURM_out/mtErrorCorrect_%j.out \
+  scripts/mtErrorCorrection.sbatch \
+  mtGenome/COPE-0773_45_50/COPE_0773_mitoannotator/Circularized_assembly_1_COPE-0773.fa \
+  mtGenome/COPE-0773_45_50/Assembled_reads_COPE-0773_R1.fasta \
+  mtGenome/COPE-0773_45_50/Assembled_reads_COPE-0773_R2.fasta \
+  mtGenome/COPE-0773_45_50/COPE_0773_ma_ec \
+  COPE-0773
+```
+
 
 Align sequences using:
 ```
