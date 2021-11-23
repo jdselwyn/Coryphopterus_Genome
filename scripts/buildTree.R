@@ -1,11 +1,13 @@
 args <- commandArgs(trailingOnly=TRUE)
 aligned_fasta <- args[1]
 out_prefix <- args[2]
-NBOOT <- as.integer(args[3])
+percent_cutoff <- as.integer(args[3]) / 100 #percent cutoff as integer from 0-100
+NBOOT <- as.integer(args[4])
 
 ##TODO - right now assume's GTR+G+I is going to be best model - sort out way to fill in settings based on what the nucleic model test finds
 
 # aligned_fasta <- '../mtGenome/aligned_gobiidae_mitogenomes.fasta'
+# aligned_fasta <- '../tmp_dir/test.fasta'
 # out_prefix <- '../mtGenome/gobiidae_mlTree'
 
 suppressMessages(library(tidyverse))
@@ -14,9 +16,12 @@ suppressMessages(library(phangorn))
 suppressMessages(library(ggraph))
 suppressMessages(library(tidygraph))
 
-alignment <- adegenet::fasta2DNAbin(aligned_fasta, snpOnly = FALSE) %>%
-  as.phyDat()
+alignment <- adegenet::fasta2DNAbin(aligned_fasta, snpOnly = TRUE)
 
+loci_remove <- which((colSums(as.character(alignment) != '-') / nrow(alignment)) < percent_cutoff) 
+
+alignment <- alignment[,-loci_remove] %>%
+  as.phyDat()
 
 #### Nucleotide Model ####
 mt <- modelTest(alignment, 
